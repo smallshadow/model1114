@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模型含二工｜3D 瀏覽</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9eff0;color:#19353b;font:16px system-ui,sans-serif;display:flex;flex-direction:column;height:100dvh}header{background:#19353b;color:white;padding:.8rem 1.2rem}h1{font-size:1.45rem;margin:.2rem 0}small{color:#b1ded7}section,nav{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}section{padding:.65rem}button,label{font:inherit;background:white;color:inherit;border:1px solid #b8c8ca;border-radius:.45rem;padding:.45rem .65rem;cursor:pointer}button[aria-pressed=true]{background:#245d56;color:white}#view{flex:1;position:relative;min-height:0;display:grid;place-items:center}canvas{position:absolute;inset:0;display:block;touch-action:none}#status{position:relative;background:#fff;padding:1rem;border-radius:.5rem}footer{padding:.45rem .7rem;font-size:.8rem}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<header><small>3D 建築模型</small><h1>模型含二工</h1></header>
+<section aria-label="模型控制"><nav id="floors" aria-label="樓層"></nav><label><input type="checkbox" id="walls" disabled> 透明牆體</label><button id="top" disabled>俯視</button><button id="reset" disabled>重設視角</button></section>
+<div id="view"><div id="status" role="status">正在載入模型…</div></div>
+<footer>拖曳旋轉 · 滾輪縮放 · 右鍵平移 · 手機可用雙指縮放及平移</footer>
+<script>if(location.protocol==="file:")document.getElementById("status").textContent="請用 GitHub Pages 或本機 HTTP 伺服器開啟（見 README）。";</script><script type="module" src="./app.mjs"></script></html>
+
